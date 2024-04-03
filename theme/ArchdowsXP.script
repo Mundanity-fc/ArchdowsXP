@@ -1,0 +1,28 @@
+## Author : Mundanity Fan
+## Mail : i@mundanity.moe
+## Github : @Mundanity-fc
+
+// Screen size
+screen.w = Window.GetWidth(0);
+screen.h = Window.GetHeight(0);
+screen.half.w = Window.GetWidth(0) / 2;
+screen.half.h = Window.GetHeight(0) / 2;
+
+// cycle through all images
+for (i = 0; i < 19; i++)
+  logo_image[i] = Image("progress-" + i + ".png");
+logo_sprite = Sprite();
+
+// set image position
+logo_sprite.SetX(Window.GetX() + (Window.GetWidth(0) / 2 - logo_image[0].GetWidth() / 2));
+logo_sprite.SetY(Window.GetY() + (Window.GetHeight(0) / 2 - logo_image[0].GetHeight() / 2));
+
+
+progress = 0;
+fun refresh_callback ()
+  {
+    logo_sprite.SetImage(logo_image[Math.Int(progress / 2) % 15]);
+    progress++;
+  }
+  
+Plymouth.SetRefreshFunction (refresh_callback);

@@ -1,0 +1,9 @@
+[Plymouth Theme]
+Name=ArchdowsXP
+Description=A Windows XP like Bootsplash Theme
+Comment=created By Mundanity Fan, inspired by rog2@adi1090x
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/ArchdowsXP
+ScriptFile=/usr/share/plymouth/themes/ArchdowsXP/ArchdowsXP.script
